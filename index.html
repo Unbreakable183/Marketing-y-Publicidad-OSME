@@ -14,38 +14,39 @@
         }
         header {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            padding: 60px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.8);
-            color: black;
+            color: white;
         }
         header h1 {
-            font-size: 4em;
+            font-size: 2em;
             font-family: 'Arial Black', sans-serif;
             font-weight: bold;
-            color: white;
+            margin: 0;
         }
         header h2 {
-            font-size: 2.5em;
+            font-size: 1.5em;
             font-family: 'Arial Black', sans-serif;
             font-weight: bold;
-            color: white;
-            margin-top: 5px;
+            margin: 5px 0 0;
         }
         header img {
-            height: 320px;
+            height: 100px;
+            max-width: 100%;
         }
         .tagline {
             text-align: center;
-            margin: 20px 0;
-            font-size: 2.5em;
+            margin: 20px 10px;
+            font-size: 1.2em;
             font-style: italic; 
             color: white;
         }
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             max-width: 1200px;
             margin: auto;
@@ -68,19 +69,50 @@
             color: white;
             text-align: center;
             padding: 10px;
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
         .category p {
-            padding: 15px;
-            font-size: 1em;
+            padding: 10px;
+            font-size: 0.9em;
             color: #E5E5E5;
         }
         footer {
             text-align: center;
             background: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 50px;
-            font-size: 2.2em;
+            padding: 20px;
+            font-size: 1em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            header h2 {
+                font-size: 1.2em;
+            }
+            header img {
+                height: 80px;
+            }
+            .tagline {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+            .tagline {
+                font-size: 0.9em;
+            }
+            footer {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -195,7 +227,7 @@
             <p>Desarrollo de aplicaciones personalizadas para tu negocio.</p>
         </div>
         <div class="category">
-            <img src="comunity-manager.jpg" alt="Comunity Manager">
+            <img src="comunity-manager.jpg" alt="Community Manager">
             <h2>Community Manager</h2>
             <p>Gestión profesional de redes sociales para fortalecer tu presencia digital.</p>
         </div>
